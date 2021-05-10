@@ -1,0 +1,372 @@
+<head>
+    <meta charset="utf-8"/>
+    <title>covid19-research.network</title>
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@pournaki">
+    <meta name="twitter:creator" content="@pournaki">
+    <meta name="twitter:title" content="covid19-research.network">
+    <meta name="twitter:description" content="Find relevant COVID-19 related literature.">
+    <meta name="twitter:image" content="https://covid19-research.net/img/social.png">
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/force-graph"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
+    <script> 
+
+    $(document).ready(function(){
+      $("#panel00").click(function(){
+        $("#content00").slideToggle(300);
+              });
+    });
+    $(document).ready(function(){
+      $("#panel01").click(function(){
+        $("#content01").slideToggle(300);
+      });
+    });
+    $(document).ready(function(){
+      $("#panel02").click(function(){
+        $("#content02").slideToggle(300);
+      });
+    });
+    $(document).ready(function(){
+      $("#panel03").click(function(){
+        $("#content03").slideToggle(300);
+      });
+    });
+    $(document).ready(function(){
+      $("#panel04").click(function(){
+        $("#content04").slideToggle(300);
+      });
+    });
+    $(document).ready(function(){
+      $("#panel05").click(function(){
+        $("#content05").slideToggle(300);
+      });
+    });
+    $(document).ready(function(){
+      $("#panel06").click(function(){
+        $("#content06").slideToggle(300);
+      });
+    });
+    $(document).ready(function(){
+      $("#panel07").click(function(){
+        $("#content07").slideToggle(300);
+      });
+    });
+
+    </script>
+</head>
+<body id="body">
+
+<div id=topbuttons>
+
+    <div class="main__item" id="listbutton">
+        <svg onclick="togglereader()" role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="listIconTitle">
+          <title id="listIconTitle"></title>
+          <path d="M10 7L18 7M10 12L18 12M10 17L18 17"></path>
+          <line x1="7" y1="7" x2="7" y2="7"></line>
+          <line x1="7" y1="12" x2="7" y2="12"></line>
+          <line x1="7" y1="17" x2="7" y2="17"></line>
+        </svg>
+    </div>
+
+    <div class="main__item3" id="netbutton">
+    <svg onclick="togglenetwork()" height='100px' width='100px'  fill="#000000" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" x="0px" y="0px" viewBox="0 0 100 100"><g transform="translate(0,-952.36218)"><path style="text-indent:0;text-transform:none;direction:ltr;block-progression:tb;baseline-shift:baseline;color:#000000;enable-background:accumulate;" d="m 50,961.36217 c -8.8129,0 -16,7.1872 -16,16 0,4.7053 2.0613,8.943 5.3125,11.875 L 27.875,1012.1434 c -1.54,-0.4955 -3.1739,-0.7812 -4.875,-0.7812 -8.8129,0 -16,7.1873 -16,16 0,8.8128 7.1871,16 16,16 8.1402,0 14.8603,-6.119 15.8438,-14 l 22.3124,0 c 0.9835,7.881 7.7036,14 15.8438,14 8.8129,0 16,-7.1872 16,-16 0,-8.8127 -7.1871,-16 -16,-16 -1.7011,0 -3.335,0.2857 -4.875,0.7812 L 60.6875,989.23717 c 3.2512,-2.932 5.3125,-7.1697 5.3125,-11.875 0,-8.8128 -7.1871,-16 -16,-16 z m -7.375,30.1875 c 2.2082,1.1531 4.7193,1.8125 7.375,1.8125 2.6557,0 5.1668,-0.6594 7.375,-1.8125 l 11.1562,22.28133 c -3.9737,2.4958 -6.761,6.6712 -7.375,11.5312 l -22.3124,0 c -0.614,-4.86 -3.4013,-9.0354 -7.375,-11.5312 L 42.625,991.54967 z" stroke="none" marker="none" visibility="visible" display="inline" overflow="visible"></path></g></svg>    
+    </div>
+
+    <div class="main__item4" id="infobutton">
+    <svg onclick="toggleinfo()" height='100px' width='100px'  fill="#000000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 33 33" enable-background="new 0 0 33 33" xml:space="preserve"><path d="M16.5,32.5c-8.822,0-16-7.178-16-16s7.178-16,16-16s16,7.178,16,16S25.322,32.5,16.5,32.5z M16.5,2.82  C8.956,2.82,2.818,8.955,2.818,16.5c0,7.543,6.138,13.68,13.682,13.68s13.682-6.137,13.682-13.68  C30.182,8.955,24.044,2.82,16.5,2.82z"></path><path d="M16.83,24.803c-0.123-0.047-0.256-0.123-0.256-0.445c0-0.133,0.021-0.287,0.068-0.475l2.021-9.797  c0.046-0.23,0.069-0.471,0.069-0.711c0-0.633-0.196-1.115-0.581-1.434c-0.863-0.709-2.373-0.57-4.885,0.279l-0.243,0.082l-0.1,1.264  h0.422c1.278,0,1.587,0.1,1.651,0.131c0.086,0.041,0.133,0.09,0.133,0.234c0,0.08-0.01,0.17-0.03,0.27  c-0.026,0.133-0.055,0.287-0.085,0.453l-1.852,8.998c-0.086,0.453-0.13,0.842-0.13,1.152c0,0.717,0.206,1.271,0.611,1.645  C14.042,26.814,14.584,27,15.259,27c0.788,0,1.847-0.219,3.235-0.668l0.248-0.08l0.1-1.281h-0.421  C17.472,24.971,17.033,24.879,16.83,24.803z"></path><path d="M19.491,6.549C19.109,6.186,18.619,6,18.035,6c-0.605,0-1.117,0.199-1.52,0.59c-0.406,0.393-0.613,0.922-0.613,1.574  c0,0.6,0.197,1.098,0.584,1.484c0.388,0.389,0.883,0.586,1.472,0.586c0.599,0,1.106-0.209,1.511-0.617  c0.402-0.408,0.606-0.938,0.606-1.576C20.075,7.418,19.879,6.916,19.491,6.549z"></path></svg>
+    </div>
+</div>
+
+<div id="totalborder">
+
+
+
+<div style="margin-top: 50px" class="borders" id="titleborder">
+<div id="title">covid19-research.net <span style="font-size:8pt; color: #eee">BETA</span></div>
+
+</div>
+<div class="borders" id="borderscontent">
+<div class= "subtitle" id="panel00">FIND ARTICLES</div>
+<div class = "content" id="content00">
+    
+
+    <div id="taggo">
+    <div class="description"> Search by keywords in abstract</div>
+    <input id="whatyousearch" type="text" name="input-custom-dropdown" class="tagclass" value="">
+    </div>
+
+<div id="thalegend" class="borders_small">
+    <div class= "subsubtitle" id="panel06">FILTER BY CATEGORIES</div>
+    <div class = "content" id="content06">
+    <div>
+    <ul style="list-style-type: none;" id="legendtext">
+    </ul>
+    <p style="margin:0; font-size:10pt"> <a class="button1" href="javascript:void(0);" onclick="resetcolors()">RESET</a>
+    </p>
+    </div>
+    </div>
+</div>
+<div id="filtaz" class="borders_small">
+    <div class= "subsubtitle" id="panel07">FILTER BY PUBLICATION TYPE</div>
+    <div class = "content" id="content07">
+    <ul style="list-style-type: none;" id="filters">
+        <li id="toggle_published" class="filter-element">
+            <img style="margin-left: 0; vertical-align: -5" width=22px src="img/publication.svg" alt="">
+            <a class="fieldlinks" href="javascript:void(0)" onclick="showpublished()">Peer-reviewed articles</a>
+        </li>
+        <li id="toggle_preprints" class="filter-element" style="margin-top: 10px;">
+            <img style="margin-left: 0; vertical-align: -5" width=22px src="img/preprint.svg" alt="">
+            <a class="fieldlinks" href="javascript:void(0)" onclick="showpreprints()">Preprints</a>
+        </li>
+        <li>
+            <p style="margin:0; margin-left:auto; margin-right:0; font-size:10pt"> <a class="button1"href="javascript:void(0);" onclick="resetnodes()">RESET</a></p>
+        <li>
+    <div>
+    </div>
+    </div>
+</div>
+
+</div>
+</div>
+<!-- <div class="borders">
+<div class= "subtitle" id="panel04">METHODS</div>
+<div class = "content" id="content04">
+    <p style="font-size: 10pt; margin-top: 0">
+    Every node in the network is a preprint, and a link is drawn between preprints based on the semantic similarity of their abstracts. 
+    </p>    
+    <h6>Data acquisition</h6>
+    <p style="font-size: 10pt;margin-top:0">
+        The underlying dataset is based on a <a class="nlink" target="_blank" href="https://connect.medrxiv.org/relate/content/181">curated list of COVID-19 related preprints</a> from <a class="nlink" target="_blank" href="https://www.medrxiv.org/">medRxiv</a> and <a class="nlink" target="_blank" href="https://www.biorxiv.org/">bioRxiv</a>.
+    </p>
+    <h6>Text preprocessing</h5>
+    <p style="font-size: 10pt;margin-top:0">
+        Before creating the network based on abstract similarity, the text is preprocessed using <a class="nlink" target="_blank" href="https://spacy.io/">spaCy</a>. English stopwords and punctuation are removed, as well as often occurring trivial words like "covid". Then, the abstracts are <a class="nlink" target="_blank" href="https://en.wikipedia.org/wiki/Lemmatisation">lemmatized</a>. Lemmas that are neither (proper) nouns, adjectives nor verbs are removed from the analysis.
+    </p>
+    <h6>Network creation</h5>
+    <p style="font-size: 10pt;margin-top:0">
+        Every node is an article. Links are drawn between nodes according to the following rule: </p>
+        <p style="font-size: 10pt; margin-bottom: 8px;padding-left: 10px">
+            Let 𝑀<sub>𝑖,𝑗</sub> be be the number of common lemmata between nodes 𝑖 and 𝑗. <br>
+            A link is created between 𝑖 and 𝑗 if 𝑀<sub>𝑖,𝑗</sub> > 𝑡<sub>𝑙</sub>.
+        </p>
+
+    <p style="font-size: 10pt;margin-top:0">
+        𝑡<sub>𝑙</sub> is defined as 16 exploratively. <br>
+        The network is layed out using a force-directed algorithm (nodes that share links are closer to each other) with the <a class="nlink" target="_blank" href="https://github.com/vasturiano/force-graph">force-graph</a> library.
+    </p>
+</div>
+</div> -->
+<!-- <div class="borders">
+<div class= "subtitle" id="panel05">ABOUT</div>
+<div class = "content" id="content05">
+    <p style="font-size: 10pt;margin-top:0">
+        This project is made by members of the <a class="nlink" target="_blank" href="https://odycceus.eu">Odycceus project</a> at the Max Planck Institute for Mathematics in the Sciences, Leipzig with the help of <a class="nlink" target="_blank" href="https://www.researchgate.net/profile/Alexander_Dejaco">Alexander Dejaco</a>. <br><br>
+        
+        Please contact the developer <a class="nlink" target="_blank" href="https://pournaki.com">Armin Pournaki</a> if you have ideas for improvements and/or found bugs:
+        pournaki[at]mis.mpg.de
+    </p>
+</div>
+</div> -->
+<div id="footer">
+    <div style="color: var(--color_text); font-size: 8pt; margin-top: 15px; margin-bottom:5px" id="updatetime"></div> 
+    covid19-research.network v0.1 </div></div>
+
+</div>
+<div class="container animated fadeIn" id="networkmode">
+    <h2 style="margin-bottom: 0px">network mode</h2>
+<div id="textinfo-net" style="margin-top: 15px">
+    Displaying the latest: <br> <br>
+    <img style="margin-left: 0; vertical-align: -2" width=20px src="img/publication.svg" alt="">
+    1000 peer-reviewed articles
+    <img style="margin-left: 5; vertical-align: -2" width=20px src="img/preprint.svg" alt="">
+    500 preprints 
+</div>    
+</div>
+
+<div class="container animated fadeIn" id="graph" style="width:100%;height: 100%;position: absolute;"></div>
+
+<div class="container animated fadeIn" id="readermode">
+    <div style="padding: 20px">
+
+<h2 style="margin-bottom: 0px; margin-top: 0px">text mode</h2>
+
+<div id="textinfo" style="margin-top: 15px">
+    Displaying the latest: <br> <br>
+    <img style="margin-left: 0; vertical-align: -2" width=20px src="img/publication.svg" alt="">
+    1000 peer-reviewed articles
+    <img style="margin-left: 5; vertical-align: -2" width=20px src="img/preprint.svg" alt="">
+    500 preprints 
+</div>
+
+<div class="container animated fadeIn" id="userinfostring"></div>
+
+</div>
+</div>
+
+<div class="container animated fadeIn" id="infomode">
+    <div class="navigation">
+    <nav>
+    <ul>
+        <li id="show_home_button" class="current"><a href="javascript:void(0);" onclick="show_home()">home</a></li>
+        <li id="show_gettingstarted_button" class="none"><a href="javascript:void(0);" onclick="show_gettingstarted()">getting started</a></li>
+        <li id="show_statistics_button" class="none"><a href="javascript:void(0);" onclick="show_statistics()">statistics</a></li>        
+        <li id="show_description_button" class="none"><a href="javascript:void(0);" onclick="show_description()">methods</a></li>
+        <li id="show_about_button" class="none"><a href="javascript:void(0);" onclick="show_about()">about</a></li>
+    </ul>
+    </nav>
+    </div>
+    <div style="height: 30px"></div>
+
+<div class="container animated fadeIn" id="home">
+    
+    <div class="img-hover-zoom">
+    <img width="500px" src="./img/initial_pic.png" alt="" style="margin-left: auto;margin-right: auto; display: block;">
+    </div>
+    <p>Welcome to the initial preview of the <span style="font-weight: bold">covid19-research.network</span>, an interactive platform that parses and visualizes the latest COVID-19-related scientific findings in an easily accessible interface.</p>
+    <p> It provides the latest peer-reviewed articles from PubMed as well as preprints from medRxiv, bioRxiv and arXiv.</p>
+
+    <h3>What do I see when I look at this network?</h3>
+    Every node is an article. Links between articles are drawn based on the semantic similarity of their abstracts. The relative positions of nodes in the network are given by a force-directed layout, which groups articles into clusters that correspond to the sub-topics in the COVID-19 literature. The nodes are colored according to categories found and hand-labelled using a LDA-based topic model.
+    
+
+ <footer class="infofooter"> <a target="_blank" href="https://www.mis.mpg.de/imprint/index.html">Imprint</a> | This project is funded by an EOSC COVID-19 Fast Track Grant.</footer>
+
+</div>
+
+<div class="container animated fadeIn" id="getting_started">
+    <div class="img-hover-zoom">
+
+    <img width="500px" src="./img/initial_pic.png" alt="" style="margin-left: auto;margin-right: auto; display: block;">    
+</div>
+    <h3>How do I start?</h3>
+    <img style="margin-left: 0; margin-right: 10px; vertical-align: -5" width=24px src="img/network.svg" alt=""> Press the network button  on the upper left to enter the <span style="font-weight: bold">network mode</span>. 
+
+    <p class="infodesc">You will see a network representation of the latest 1500 articles <br>(1000 peer-reviewed publications and 500 preprints). </p>
+
+    <br>
+    <img style="margin-left: 0; margin-right: 10px; vertical-align: -4" width=24px src="img/click.svg" alt=""> Click on a node and highlight it as well as all other articles that are similar to it.
+    <br> <br>
+    <img style="margin-left: 0; margin-right: 15px; vertical-align: -4" width=20px src="img/list.svg" alt=""> Enter the text mode on the upper left to see a classical list view of the selected articles. 
+    <br><br>
+    <img style="margin-left: 0; margin-right: 19px; vertical-align: -4" width=20px src="img/filter.svg" alt="">Apply the filters in the command palette on the left to find relevant articles for you.
+    
+ <footer class="infofooter"> <a target="_blank" href="https://www.mis.mpg.de/imprint/index.html">Imprint</a> | This project is funded by an EOSC COVID-19 Fast Track Grant.</footer>
+</div>
+
+<div class="container animated fadeIn" id="statistics">
+    <h3>Time series</h3>
+    <div class="plotnav"> 
+        <ul>
+            <div style="float: left">
+            <li id="button_topicsmonthly" class="current"><a href="javascript:void(0);" onclick="plot_stats('data/by_topiclabel.csv','button_topicsmonthly')">Article count by topics (monthly)</a></li>
+
+            <li id="button_topicscumulative" class="none"><a href="javascript:void(0);" onclick="plot_stats('data/by_topiclabel.csv','button_topicsmonthly')"></a><a href="javascript:void(0);" onclick="plot_stats_cs('data/by_topiclabel_cs.csv', 'button_topicscumulative')">Article count by topics (cumulative)</a></li>
+            </div>
+            <div style="float: right;margin-right: 250px">
+            <li id="button_serversmonthly" class="none"><a href="javascript:void(0);" onclick="plot_stats_cs('data/by_topiclabel_cs.csv', 'button_topicscumulative')"></a><a href="javascript:void(0);" onclick="plot_stats('data/by_server.csv', 'button_serversmonthly')">Article count by server (monthly)</a></li>
+
+            <li id="button_serverscumulative" class="none"><a href="javascript:void(0);" onclick="plot_stats('data/by_server.csv', 'button_serversmonthly')"></a><a href="javascript:void(0);" onclick="plot_stats_cs('data/by_server_cs.csv', 'button_serverscumulative')">Article count by server (cumulative)</a></li>
+            </div>
+        </ul>
+    </div>
+
+    <div id="statsplot01"></div>
+<footer class="infofooter"> <a target="_blank" href="https://www.mis.mpg.de/imprint/index.html">Imprint</a> | This project is funded by an EOSC COVID-19 Fast Track Grant.</footer>
+</div>
+
+<div class="container animated fadeIn" id="description">
+    
+    <h3>Data acquisition</h3>
+    <p> The latest COVID-19 related research articles are collected daily from PubMed (peer-reviewed articles and letters), bioRxiv, medRxiv and arXiv (preprints). </p>
+    
+    <h3>Categorization</h3>
+    <p>After preprocessing, a LDA topic model is trained on the whole corpus. The resulting topics are labelled by hand.</p>
+
+    <h3>Network creation</h3>
+    <p>Every node in the network is an article. They are linked based on the cosine similarity of the tf-idf vectors of their abstracts.</p>
+
+    <h3>Graph layout and partitioning</h3>
+    We visualize the resulting graph using a force-directed algorithm, where the relative positions of the nodes depend on their adjacency (nodes that are strongly connected are close to each other). In this context, dense groups of nodes are expected to correspond to underlying sub-categories in the literature. 
+
+ <footer class="infofooter"> <a target="_blank" href="https://www.mis.mpg.de/imprint/index.html">Imprint</a> | This project is funded by an EOSC COVID-19 Fast Track Grant.</footer>
+</div>
+
+
+<div class="container animated fadeIn" id="about">
+    
+    <h3>covid19-research.network</h3>
+    
+    <ul id="people">
+        <li>Armin Pournaki (Max Planck Institute for Mathematics in the Sciences, Leipzig) <br> 
+        </li>
+        <li>Alexander Dejaco (Department of Anaesthesia, University Hospital of Regensburg)<br> 
+        </li> 
+        <li>Sven Banisch (Max Planck Institute for Mathematics in the Sciences, Leipzig) <br> 
+        </li>
+        <li>Eckehard Olbrich (Max Planck Institute for Mathematics in the Sciences, Leipzig)<br> 
+        </li>
+        <li>Hermann Brugger (Institute of Mountain Emergency Medicine, EURAC Research, Bolzano)<br> 
+        </li>
+    </ul>
+
+        <h3>I found a bug!</h3>
+    Note that the initial release works best on Firefox and Chrome on desktop devices. <br> <br>
+    Please report any bugs to pournaki[at]mis.mpg.de and don't hesitate to get in touch for suggestions and improvements.
+
+ <footer class="infofooter"> <a target="_blank" href="https://www.mis.mpg.de/imprint/index.html">Imprint</a> | This project is funded by an EOSC COVID-19 Fast Track Grant.</footer>
+</div>
+
+</div>
+
+<script type="text/javascript">
+
+// load graph from external file
+var data = (function () {
+    var json = null;
+    $.ajax({
+        'async': false,
+        'global': false,
+        'url': "./data/graph.json",
+        'dataType': "json",
+        'success': function (data) {
+            json = data;
+        }
+    });
+    return json;
+})(); 
+
+const elem = document.getElementById('graph');
+const Graph = ForceGraph()(elem)
+.graphData({nodes: data.nodes, links: data.links})
+.nodeLabel(node => node.title)
+.nodeVal(() => 1.7)
+.nodeColor(node => colordict[node.topic])
+.linkVisibility(link => {
+    if (link.index % 2 == 0)
+        { return true }
+    else
+        { return false}
+})
+.linkColor(link => 'rgba(0,0,0,0.05)')
+.linkHoverPrecision(10)
+.enableNodeDrag(false)
+//.backgroundColor("white")
+
+$("#content00").slideDown(0)
+$("#content06").slideDown(0)
+$("#content07").slideDown(0)
+</script>
+
+<script src="src/functions.js"></script>
+<script src="src/plotstats_cumsum.js"></script>
+<script src="src/plotstats_noncumsum.js"></script>
+
+</body>
